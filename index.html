@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>منصة التدريب في الأمن السيبراني</title>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#eef3f1; --surface:#ffffff; --ink:#16213a; --muted:#56627a; --line:#d5dfdb;
+  --red:#c8102e; --green:#1f7a4d; --blue:#1d5fb4; --amber:#b86e00; --slate:#6b7688;
+  --red-t:#fbe6ea; --green-t:#e1f1e8; --blue-t:#e2edfa; --amber-t:#fbefd9; --slate-t:#e8ebf0;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#101a1c; --surface:#18262a; --ink:#e8efee; --muted:#a2b1b3; --line:#2b3c40;
+    --red:#ff6b82; --green:#5fd39a; --blue:#79aef2; --amber:#f0b45c; --slate:#aab4c5;
+    --red-t:#3a1a21; --green-t:#173125; --blue-t:#162a44; --amber-t:#372a14; --slate-t:#222b38;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101a1c; --surface:#18262a; --ink:#e8efee; --muted:#a2b1b3; --line:#2b3c40;
+  --red:#ff6b82; --green:#5fd39a; --blue:#79aef2; --amber:#f0b45c; --slate:#aab4c5;
+  --red-t:#3a1a21; --green-t:#173125; --blue-t:#162a44; --amber-t:#372a14; --slate-t:#222b38;
+  color-scheme:dark;
+}
+html{height:auto;scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"IBM Plex Sans Arabic",Tahoma,"Segoe UI",sans-serif;line-height:1.8}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px 56px}
+header{padding:56px 0 36px}
+.bar{display:flex;height:6px;max-width:220px;border-radius:3px;overflow:hidden;margin-bottom:28px}
+.bar i{flex:1}
+.bar i:nth-child(1){background:var(--red)}.bar i:nth-child(2){background:var(--surface);outline:1px solid var(--line);outline-offset:-1px}.bar i:nth-child(3){background:var(--green)}
+h1{font-size:clamp(2rem,5.5vw,3.4rem);line-height:1.3;margin:0 0 14px;font-weight:700;letter-spacing:0}
+header p{max-width:60ch;margin:0;color:var(--muted);font-size:1.1rem}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{position:relative;display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;color:inherit;text-decoration:none;border-top:5px solid var(--c)}
+.card.wide{grid-column:1/-1;flex-direction:row;align-items:center;gap:22px}
+.ico{flex:none;width:56px;height:56px;border-radius:12px;background:var(--t);display:grid;place-items:center;font-size:1.7rem}
+.card h2{margin:0;font-size:1.3rem;line-height:1.5}
+.card p{margin:0;color:var(--muted);font-size:1rem}
+.go{margin-top:auto;align-self:flex-start;display:inline-block;background:var(--c);color:#fff;padding:8px 20px;border-radius:8px;font-weight:700;font-size:.95rem}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .go{color:#101a1c}}
+:root[data-theme="dark"] .go{color:#101a1c}
+a.card:hover{border-color:var(--c)}
+a.card:focus-visible{outline:3px solid var(--c);outline-offset:3px}
+.split{background:linear-gradient(90deg,var(--red) 50%,var(--blue) 50%);border-top:0;padding-top:29px}
+.split::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;border-radius:14px 14px 0 0;background:linear-gradient(90deg,var(--blue) 50%,var(--red) 50%)}
+.split{background:var(--surface)}
+.split .go{background:linear-gradient(90deg,var(--blue) 50%,var(--red) 50%);color:#fff}
+.soon{--c:var(--slate);--t:var(--slate-t);border-style:dashed;border-top-style:solid}
+.soon .go{background:transparent;color:var(--muted);border:1px dashed var(--muted);cursor:default}
+footer{margin-top:36px;color:var(--muted);font-size:.9rem}
+@media (max-width:680px){
+  .grid{grid-template-columns:1fr}
+  .card.wide{flex-direction:column;align-items:flex-start}
+  header{padding-top:40px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="bar" aria-hidden="true"><i></i><i></i><i></i></div>
+    <h1>منصة التدريب في الأمن السيبراني</h1>
+    <p>خمسة مسارات تدريبية في مكان واحد، من التحديات العملية إلى التوعية والاستجابة للحوادث. اختر المسار الذي تريده وابدأ.</p>
+  </header>
+
+  <main class="grid">
+    <a class="card" style="--c:var(--red);--t:var(--red-t)" href="https://collegefox.github.io/ctf-flagbearer/" target="_blank" rel="noopener">
+      <div class="ico" aria-hidden="true">🚩</div>
+      <h2>تحديات حامل الراية</h2>
+      <p>تدريب على حل تحديات الأمن السيبراني والبحث عن الرايات في مسائل عملية متدرجة.</p>
+      <span class="go">ابدأ التحديات</span>
+    </a>
+
+    <a class="card split" style="--c:var(--blue);--t:var(--blue-t)" href="https://collegefox.github.io/ctf-team-oman/" target="_blank" rel="noopener">
+      <div class="ico" aria-hidden="true">⚔️</div>
+      <h2>الفريق الأحمر والفريق الأزرق</h2>
+      <p>تنمية مهارات الهجوم لدى الفريق الأحمر ومهارات الدفاع والرصد لدى الفريق الأزرق.</p>
+      <span class="go">ابدأ التدريب</span>
+    </a>
+
+    <a class="card" style="--c:var(--green);--t:var(--green-t)" href="https://collegefox.github.io/utas-ctf/" target="_blank" rel="noopener">
+      <div class="ico" aria-hidden="true">🧒</div>
+      <h2>التوعية الأمنية للأطفال</h2>
+      <p>تدريب مبسط وممتع يعلّم الأطفال حماية حساباتهم ومعلوماتهم أثناء استخدام الإنترنت.</p>
+      <span class="go">ابدأ التوعية</span>
+    </a>
+
+    <a class="card" style="--c:var(--amber);--t:var(--amber-t)" href="https://collegefox.github.io/incident-response/" target="_blank" rel="noopener">
+      <div class="ico" aria-hidden="true">⏱️</div>
+      <h2>سرعة الاستجابة للحوادث</h2>
+      <p>سيناريوهات حوادث أمنية تقيس سرعة قرارك ودقة إجراءاتك تحت الضغط.</p>
+      <span class="go">ابدأ الاستجابة</span>
+    </a>
+
+    <a class="card wide" style="--c:var(--slate);--t:var(--slate-t)" href="https://collegefox.github.io/technical-support/" target="_blank" rel="noopener">
+      <div class="ico" aria-hidden="true">🎧</div>
+      <div>
+        <h2>تدريب موظف الدعم الفني</h2>
+        <p>مسار لتدريب موظفي الدعم الفني على التعامل مع البلاغات الأمنية.</p>
+      </div>
+      <span class="go" style="margin-inline-start:auto">ابدأ التدريب</span>
+    </a>
+  </main>
+
+  <footer>تفتح المسارات في صفحة جديدة، ويمكنك العودة إلى هذه الصفحة في أي وقت.</footer>
+</div>
+</body>
+</html>
